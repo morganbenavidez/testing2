@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head id="index_head">
+
+    <meta  data-static="true" charset="UTF-8">
+    <meta  data-static="true" name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Import Bootstrap CSS -->
+    <link  data-static="true" rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- Import jQuery (for AJAX) -->
+    <script  data-static="true" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Link to Summit JavaScript file 
+    <script src="{{ url_for('static', filename='js/summit.js') }}"></script>-->
+    <script  data-static="true" src="{{ url_for('summit_static', filename='summit.js') }}"></script>
+
+    <!-- Link to your custom JavaScript file -->
+    <script  data-static="true" src="{{ url_for('static', filename='js/project.js') }}"></script>
+
+    <!-- Link to your custom CSS -->
+    <link  data-static="true" rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+
+</head>
+<body id="index_body" data-page="{{ page }}">
+    <div id="centered_block">
+        
+    </div>
+</body>
+</html>
+
