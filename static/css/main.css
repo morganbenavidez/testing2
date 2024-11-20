@@ -2,11 +2,13 @@
 #centered_block {
     font-family: Arial, sans-serif;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: auto;
+    min-height: 100vh;
     margin: 0;
-    background: radial-gradient(circle, #65F9FC 10%, #010518 70%);
+    /*background: radial-gradient(circle, #65F9FC 10%, #010518 70%);*/
 }
 
 h1 {
@@ -16,9 +18,26 @@ h1 {
     font-weight: bolder;
 }
 
-#app {
+.menuDiv {
     width: 80%;
     max-width: 600px;
+    text-align: center;
+}
+
+ol {
+    text-decoration: none;
+    text-align: center;
+}
+
+li {
+    text-decoration: none;
+    text-align: left;
+    font-weight: bolder;
+}
+
+#app {
+    width: 100%;
+    max-width: 800px;
     text-align: center;
 }
 .button {
@@ -37,8 +56,36 @@ h1 {
 .button:hover {
     background-color: #0056b3;
 }
+
+#classroom {
+    background-color: #010518;
+}
+
+#classroom:hover {
+    background-color: #65F9FC;
+}
+
+#exploreButton {
+    display: inline-block;
+    margin: 10px;
+    padding: 15px 30px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #010518;
+    border-radius: 20px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+#exploreButton:hover {
+    color: #010518;
+    background-color: #65F9FC;
+}
+
 form {
-    margin-top: 20px;
+    max-width: 300px;
+    margin: 0;
 }
 input {
     margin: 10px 0;
@@ -47,12 +94,21 @@ input {
     font-size: 16px;
 }
 input[type="submit"] {
-    background-color: #28a745;
+    background-color: #010518;
     color: #fff;
     border-radius: 20px;
     border: none;
     cursor: pointer;
 }
 input[type="submit"]:hover {
-    background-color: #218838;
+    background-color: #65F9FC;
+}
+
+#screen-overlay {
+    transition: opacity 0.3s ease;
+    opacity: 0;
+}
+
+#screen-overlay[style*="block"] {
+    opacity: 1;
 }
